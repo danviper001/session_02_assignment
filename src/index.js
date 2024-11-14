@@ -1,17 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './PricingCard.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const PricingCard = ({ plan, price, features }) => {
+  return (
+    <div className="pricing-card">
+      <h3>{plan}</h3>
+      <h1>{price}</h1>
+      <ul>
+        {features.map((feature, index) => (
+          <li key={index} className={feature.included ? 'included' : 'excluded'}>
+            {feature.name}
+          </li>
+        ))}
+      </ul>
+      <button>BUTTON</button>
+    </div>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export default PricingCard;
