@@ -38,8 +38,14 @@
   text-decoration: line-through;
 }
 
+.find {
+  height: 200px;
+}
+
+
+
 .pricing-card button {
-  background-color: #007BFF;
+  background-color: blue;
   color: #fff;
   border: none;
   padding: 10px 20px;
